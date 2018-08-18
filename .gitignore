@@ -42,6 +42,6 @@ Icon?
 
 # Env #
 src/environments/environment.develop.ts
-admin/src/environments/environment.uat.ts
-admin/src/environments/environment.prod.ts
+src/environments/environment.uat.ts
+src/environments/environment.prod.ts
 version.json
