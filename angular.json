@@ -17,21 +17,60 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/jmandreslopez",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/"
+              }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/hover.css/css/hover-min.css",
+              "node_modules/ladda/dist/ladda.min.css",
+              "src/styles/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/moment/min/moment.min.js"
+            ]
           },
           "configurations": {
+            "sandbox": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/seller/src/environments/environment.ts",
+                  "with": "projects/seller/src/environments/environment.develop.ts"
+                }
+              ]
+            },
+            "uat": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.uat.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -54,9 +93,16 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "jmandreslopez:build"
+            "browserTarget": "jmandreslopez:build",
+            "port": 3000
           },
           "configurations": {
+            "sandbox": {
+              "browserTarget": "jmandreslopez:build:develop"
+            },
+            "uat": {
+              "browserTarget": "jmandreslopez:build:uat"
+            },
             "production": {
               "browserTarget": "jmandreslopez:build:production"
             }
@@ -76,12 +122,15 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/"
+              }
             ]
           }
         },

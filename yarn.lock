@@ -179,6 +179,16 @@
   dependencies:
     tslib "^1.9.0"
 
+"@fortawesome/fontawesome-free@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.2.0.tgz#50cd9856774351c56c0b1b0db4efe122d7913e58"
+
+"@ng-bootstrap/ng-bootstrap@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-3.0.0.tgz#d441172972c6b7969ff2c6e9c9c4306f300f3c61"
+  dependencies:
+    tslib "^1.9.0"
+
 "@ngtools/webpack@6.1.4":
   version "6.1.4"
   resolved "https://registry.npmjs.org/@ngtools/webpack/-/webpack-6.1.4.tgz#dab670b4f03a88afd07ed15e1b5f27f16c3be3a8"
@@ -187,6 +197,19 @@
     rxjs "^6.0.0"
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
+
+"@ngx-loading-bar/core@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/@ngx-loading-bar/core/-/core-2.1.2.tgz#13656d27ece2bc384469899a0624a490f18bedd7"
+  dependencies:
+    tslib "^1.7.1"
+
+"@ngx-loading-bar/router@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/@ngx-loading-bar/router/-/router-2.1.2.tgz#b1c77c64a2edee41805957bd36f4eccc459d8e3f"
+  dependencies:
+    "@ngx-loading-bar/core" "2.1.2"
+    tslib "^1.7.1"
 
 "@schematics/angular@0.7.4":
   version "0.7.4"
@@ -217,6 +240,10 @@
   dependencies:
     "@types/jasmine" "*"
 
+"@types/lodash@^4.14.116":
+  version "4.14.116"
+  resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.116.tgz#5ccf215653e3e8c786a58390751033a9adca0eb9"
+
 "@types/node@^6.0.46":
   version "6.0.116"
   resolved "https://registry.npmjs.org/@types/node/-/node-6.0.116.tgz#2f9cd62b4ecc4927e3942e2655c182eecf5b45f1"
@@ -232,6 +259,10 @@
 "@types/selenium-webdriver@^3.0.0":
   version "3.0.10"
   resolved "https://registry.npmjs.org/@types/selenium-webdriver/-/selenium-webdriver-3.0.10.tgz#e98cc6f05b4b436277671c784ee2f9d05a634f9b"
+
+"@ultimate/ngxerrors@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/@ultimate/ngxerrors/-/ngxerrors-1.4.0.tgz#be30acaa7a4698c46633705a4616f56b60c78d61"
 
 "@webassemblyjs/ast@1.4.3":
   version "1.4.3"
@@ -452,6 +483,22 @@ align-text@^0.1.1, align-text@^0.1.3:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.npmjs.org/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+
+angular2-ladda@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/angular2-ladda/-/angular2-ladda-2.0.0.tgz#464dc8a0134748c3fd847af9f8e41171c52eb83a"
+  dependencies:
+    ladda "^2.0.0"
+
+angulartics2@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.npmjs.org/angulartics2/-/angulartics2-6.2.0.tgz#52eab311be74c9d055632e385988645c233a2c0f"
+  dependencies:
+    tslib "^1.9.0"
+
+animate.css@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.npmjs.org/animate.css/-/animate.css-3.7.0.tgz#5de25d1ee5fba11ba6a1e2c4fa568f512eb7d4da"
 
 ansi-html@0.0.7:
   version "0.0.7"
@@ -855,6 +902,10 @@ bonjour@^3.5.0:
 boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
+
+bootstrap@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.npmjs.org/bootstrap/-/bootstrap-4.1.3.tgz#0eb371af2c8448e8c210411d0cb824a6409a12be"
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -1695,6 +1746,10 @@ destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
 
+detect-browser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/detect-browser/-/detect-browser-3.0.0.tgz#3fc232002c56d427410a9e1ac3b3e8c3a80bb848"
+
 detect-indent@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/detect-indent/-/detect-indent-4.0.0.tgz#f76d064352cdf43a1cb6ce619c4ee3a9475de208"
@@ -2228,6 +2283,10 @@ file-loader@^1.1.11:
     loader-utils "^1.0.2"
     schema-utils "^0.4.5"
 
+file-saver@^1.3.8:
+  version "1.3.8"
+  resolved "https://registry.npmjs.org/file-saver/-/file-saver-1.3.8.tgz#e68a30c7cb044e2fb362b428469feb291c2e09d8"
+
 filename-regex@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/filename-regex/-/filename-regex-2.0.1.tgz#c1c4b9bee3e09725ddb106b75c1e301fe2f18b26"
@@ -2676,7 +2735,7 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-he@1.1.x:
+he@1.1.x, he@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
@@ -2691,6 +2750,10 @@ hmac-drbg@^1.0.0:
 hosted-git-info@^2.1.4, hosted-git-info@^2.6.0:
   version "2.7.1"
   resolved "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
+
+hover.css@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.npmjs.org/hover.css/-/hover.css-2.3.2.tgz#f07193d9c7409d4e395134d3b2215b99eb55e0d3"
 
 hpack.js@^2.1.6:
   version "2.1.6"
@@ -3450,6 +3513,12 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.npmjs.org/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
+ladda@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/ladda/-/ladda-2.0.1.tgz#523bb026dfbc804bb37615a08189405406198732"
+  dependencies:
+    spin.js "^4.0.0"
+
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
@@ -3854,6 +3923,10 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.22.2:
+  version "2.22.2"
+  resolved "https://registry.npmjs.org/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -3927,6 +4000,18 @@ neo-async@^2.5.0:
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.npmjs.org/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
+ngx-cookie@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/ngx-cookie/-/ngx-cookie-4.0.2.tgz#dc0044826cc3482b723fa70ecc6cd12af057d862"
+  dependencies:
+    tslib "^1.9.0"
+
+ngx-moment@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/ngx-moment/-/ngx-moment-3.1.0.tgz#41380b4dd8b68e7bd6d17cc6fe7f703ae506dc3a"
+  dependencies:
+    tslib "^1.9.0"
 
 no-case@^2.2.0:
   version "2.3.2"
@@ -5005,6 +5090,10 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
+rxjs-compat@^6.0.0:
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/rxjs-compat/-/rxjs-compat-6.2.2.tgz#3c0fcdb46130cc70aa55412c2b1147905ab4680a"
+
 rxjs@^6.0.0:
   version "6.2.2"
   resolved "https://registry.npmjs.org/rxjs/-/rxjs-6.2.2.tgz#eb75fa3c186ff5289907d06483a77884586e1cf9"
@@ -5453,6 +5542,10 @@ spdy@^3.4.1:
     select-hose "^2.0.0"
     spdy-transport "^2.0.18"
 
+spin.js@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/spin.js/-/spin.js-4.0.0.tgz#d6643232cc20b8d2c1b3ab6f0661178145b4dde8"
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.npmjs.org/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
@@ -5813,7 +5906,7 @@ tsickle@^0.32.1:
     source-map "^0.6.0"
     source-map-support "^0.5.0"
 
-tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 

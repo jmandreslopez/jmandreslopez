@@ -37,3 +37,11 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Icon?
+
+# Env #
+src/environments/environment.develop.ts
+admin/src/environments/environment.uat.ts
+admin/src/environments/environment.prod.ts
+version.json
