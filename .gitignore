@@ -41,7 +41,7 @@ ehthumbs.db
 Icon?
 
 # Env #
-src/environments/environment.develop.ts
+src/environments/environment.dev.ts
 src/environments/environment.uat.ts
 src/environments/environment.prod.ts
 version.json
