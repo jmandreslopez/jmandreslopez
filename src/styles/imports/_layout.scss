@@ -1,0 +1,25 @@
+// ===== Layout =====
+
+.container,
+.container-fluid {
+    position: relative; // Ensure absolute children will be relative to their container if no other relative parent
+}
+
+.layout-footer {
+    $footer-padding: $spacer * 3;
+    $footer-color: rgba($light, 0.5);
+    @extend .text-light;
+    @extend .text-muted;
+    @extend .bg-gradient-dark !optional;
+    // color: $footer-color;
+    padding-top: $footer-padding;
+    padding-bottom: $footer-padding;
+
+    a {
+        // color: $footer-color;
+
+        &:hover, &:focus {
+            color: $light;
+        }
+    }
+}

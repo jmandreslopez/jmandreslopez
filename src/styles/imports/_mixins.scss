@@ -1,0 +1,12 @@
+// ===== Library Mixins =====
+
+// === Bootstrap Mixins ===
+@import 'node_modules/bootstrap/scss/mixins';
+
+@mixin transform($value) {
+	transform: $value;
+	-o-transform: $value;
+	-ms-transform: $value;
+	-moz-transform: $value;
+	-webkit-transform: $value;
+}

@@ -46,11 +46,11 @@
             ]
           },
           "configurations": {
-            "sandbox": {
+            "dev": {
               "fileReplacements": [
                 {
-                  "replace": "projects/seller/src/environments/environment.ts",
-                  "with": "projects/seller/src/environments/environment.develop.ts"
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
                 }
               ]
             },
@@ -71,7 +71,7 @@
               "vendorChunk": false,
               "buildOptimizer": true
             },
-            "production": {
+            "prod": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -97,14 +97,14 @@
             "port": 3000
           },
           "configurations": {
-            "sandbox": {
-              "browserTarget": "jmandreslopez:build:develop"
+            "dev": {
+              "browserTarget": "jmandreslopez:build:dev"
             },
             "uat": {
               "browserTarget": "jmandreslopez:build:uat"
             },
-            "production": {
-              "browserTarget": "jmandreslopez:build:production"
+            "prod": {
+              "browserTarget": "jmandreslopez:build:prod"
             }
           }
         },
@@ -159,8 +159,8 @@
             "devServerTarget": "jmandreslopez:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "jmandreslopez:serve:production"
+            "prod": {
+              "devServerTarget": "jmandreslopez:serve:prod"
             }
           }
         },

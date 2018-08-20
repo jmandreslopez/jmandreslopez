@@ -1,0 +1,59 @@
+@import 'imports/main';
+
+// Loading Variables
+$spinner-size: 120px;
+$spinner-duration: 1500ms;
+$spinner-stroke-color: $primary;
+$spinner-stroke-size: 3px;
+$spinner-stroke-amount: 9;
+
+.loading-container {
+    display: block;
+    z-index:999999999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    position: fixed;
+    background: #FFFFFF;
+    opacity: 0.8;
+
+    .loading-spinner,
+    .loading-spinner * {
+        box-sizing: border-box;
+    }
+
+    .loading-spinner {
+        height: $spinner-size;
+        width: $spinner-size;
+        padding: $spinner-stroke-size;
+        overflow: hidden;
+        position: relative;
+
+        .spinner-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: $spinner-stroke-size solid transparent;
+            border-top-color: $spinner-stroke-color;
+            animation: rotate $spinner-duration cubic-bezier(0.680, -0.750, 0.265, 1.750) infinite forwards;
+            margin: auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+
+            @for $i from 1 through $spinner-stroke-amount {
+                $spinner-ring-size: $spinner-size - ($spinner-stroke-size * 2);
+                $spinner-ring-position: $spinner-ring-size / $spinner-stroke-amount;
+                $spinner-ring-calc: calc(#{$spinner-ring-position} + #{($i - 1)} * #{$spinner-ring-position});
+
+                &:nth-child(#{$i}) {
+                    height: $spinner-ring-calc;
+                    width: $spinner-ring-calc;
+                    animation-delay: calc(50ms * #{$i});
+                }
+            }
+        }
+    }
+}

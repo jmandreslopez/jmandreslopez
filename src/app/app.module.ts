@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Modules
+import { LayoutsModule } from './layouts';
+import { CoreModule } from './modules';
+import { SharedModule } from './modules';
 import { AppRoutingModule } from './app-routing.module';
 
 // Components
@@ -15,6 +18,9 @@ import { AppProviders } from './app.providers';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        LayoutsModule,
+        CoreModule,
+        SharedModule,
         AppRoutingModule,
     ],
     declarations: [AppComponent],
