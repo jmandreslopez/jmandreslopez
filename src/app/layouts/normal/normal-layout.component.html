@@ -1,17 +1,22 @@
 <div class="row no-gutters">
-    <section class="col-lg-12">
-        <main #main class="layout-main">
+    <div class="col-lg-12">
+        <div #main class="layout-main">
+
+            <!-- Header -->
+            <header class="layout-header">
+                <jm-header></jm-header>
+            </header>
 
             <!-- Content -->
-            <section class="layout-content" [@routeAnimations]="outlet.isActivated && o.activatedRoute.component.name">
+            <section class="layout-content" [@routeAnimations]="outlet.isActivated && outlet.activatedRoute.component.name">
                 <router-outlet #outlet="outlet"></router-outlet>
             </section>
 
             <!-- Footer -->
             <footer class="layout-footer">
-                <!-- <jm-footer></jm-footer> -->
+                <jm-footer></jm-footer>
             </footer>
 
-        </main>
-    </section>
+        </div>
+    </div>
 </div>

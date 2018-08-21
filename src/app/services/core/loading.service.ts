@@ -83,8 +83,6 @@ export class LoadingService implements OnInit, OnDestroy {
 
     protected onNavigationStart(event: NavigationStart) {
 
-        console.log('entro', this.configService.isDebug());
-
         // Only if Debug is enabled
         if (this.configService.isDebug()) {
 

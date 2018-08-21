@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Modules
-import { LayoutsModule } from './layouts';
-import { CoreModule } from './modules';
-import { SharedModule } from './modules';
+import { LayoutsModule } from './layouts/layouts.module';
+import { CoreModule } from './modules/core/core.module';
+import { SharedModule } from './modules/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // Components
