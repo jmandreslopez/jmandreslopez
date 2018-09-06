@@ -5,5 +5,6 @@
 export interface Environment {
     production?: boolean;
     debug?: boolean;
-    debug_level?: string;
+    cookie_name?: string;
+    cookie_domain?: string;
 }

@@ -9,7 +9,11 @@ export const environment = {
 
     // Debug
     debug: false,
-    debug_level: 'all',
+
+    // Cookies
+    cookie_name: 'jwt',
+    cookie_domain: 'jmandreslopez.com',
+
 };
 
 /*

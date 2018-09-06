@@ -95,8 +95,10 @@ if (! isUndefined(filename) && ! isUndefined(type)) {
         file = require(filename);
 
         // Update values
-        file.version = increaseVersion(file.version, type);
-        file.timestamp = getTimestamp();
+        file = {
+          version: increaseVersion(file.version, type), // Increase Version
+          timestamp: getTimestamp(), // Update Timestamp
+        };
       }
 
       // Save File

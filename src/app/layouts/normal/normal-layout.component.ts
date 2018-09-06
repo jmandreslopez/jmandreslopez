@@ -15,8 +15,8 @@ import { HelpersService } from '@app/services';
     animations: [routeAnimations]
 })
 export class NormalLayoutComponent implements OnInit, OnDestroy {
-    @ViewChild('main') container: ElementRef;
     protected subscriptions: Array<Subscription> = [];
+    @ViewChild('main') container: ElementRef;
 
     constructor(protected router: Router,
                 protected helpersService: HelpersService) {

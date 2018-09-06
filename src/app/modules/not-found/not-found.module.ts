@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 // Modules
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../shared/shared.module'; // No barrel
 import { NotFoundRoutingModule } from './not-found-routing.module';
 
 // Components

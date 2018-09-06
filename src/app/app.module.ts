@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Vendors
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+
 // Modules
-import { LayoutsModule } from './layouts/layouts.module';
-import { CoreModule } from './modules/core/core.module';
-import { SharedModule } from './modules/shared/shared.module';
+import { LayoutsModule } from '@app/layouts/layouts.module';
+import { CoreModule } from '@app/modules/core/core.module';
+import { SharedModule } from '@app/modules/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // Components
@@ -22,6 +26,9 @@ import { AppProviders } from './app.providers';
         CoreModule,
         SharedModule,
         AppRoutingModule,
+
+        // Vendors
+        // Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ]), // Angulartics
     ],
     declarations: [AppComponent],
     providers: [AppProviders],
