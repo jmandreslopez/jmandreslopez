@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jmandreslopez": {
-      "root": "",
-      "sourceRoot": "src",
+    "site": {
+      "root": "projects/site/",
+      "sourceRoot": "projects/site",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "ja",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -17,28 +17,34 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "outputPath": "dist/site",
+            "index": "projects/site/index.html",
+            "main": "projects/site/main.ts",
+            "polyfills": "projects/site/polyfills.ts",
+            "tsConfig": "projects/site/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/assets",
+                "input": "library/assets",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "projects/site/assets",
                 "output": "/"
               }
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/styles"
+                "projects/site",
+                "projects/site/styles"
               ]
             },
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/animate.css/animate.min.css",
               "node_modules/ladda/dist/ladda.min.css",
-              "src/styles/styles.scss"
+              "projects/site/styles/styles.scss"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -50,16 +56,16 @@
             "dev": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.dev.ts"
+                  "replace": "projects/site/environments/environment.ts",
+                  "with": "projects/site/environments/environment.dev.ts"
                 }
               ]
             },
             "uat": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.uat.ts"
+                  "replace": "projects/site/environments/environment.ts",
+                  "with": "projects/site/environments/environment.uat.ts"
                 }
               ],
               "optimization": true,
@@ -75,8 +81,8 @@
             "prod": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "projects/site/environments/environment.ts",
+                  "with": "projects/site/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -94,88 +100,149 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "jmandreslopez:build",
+            "browserTarget": "site:build",
             "port": 3000
           },
           "configurations": {
             "dev": {
-              "browserTarget": "jmandreslopez:build:dev"
+              "browserTarget": "site:build:dev"
             },
             "uat": {
-              "browserTarget": "jmandreslopez:build:uat"
+              "browserTarget": "site:build:uat"
             },
             "prod": {
-              "browserTarget": "jmandreslopez:build:prod"
+              "browserTarget": "site:build:prod"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jmandreslopez:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles/styles.scss"
-            ],
-            "scripts": [],
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "/"
-              }
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "browserTarget": "site:build"
           }
         }
       }
     },
-    "jmandreslopez-e2e": {
-      "root": "e2e/",
+    "admin": {
+      "root": "projects/admin/",
+      "sourceRoot": "projects/admin",
       "projectType": "application",
+      "prefix": "ja",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "jmandreslopez:serve"
+            "outputPath": "dist/admin",
+            "index": "projects/admin/index.html",
+            "main": "projects/admin/main.ts",
+            "polyfills": "projects/admin/polyfills.ts",
+            "tsConfig": "projects/admin/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "library/assets",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "projects/admin/assets",
+                "output": "/"
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/admin",
+                "projects/admin/styles"
+              ]
+            },
+            "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/ladda/dist/ladda.min.css",
+              "projects/admin/styles/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/moment/min/moment.min.js",
+              "node_modules/sweetalert2/dist/sweetalert2.min.js"
+            ]
           },
           "configurations": {
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/admin/environments/environment.ts",
+                  "with": "projects/admin/environments/environment.dev.ts"
+                }
+              ]
+            },
+            "uat": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/admin/environments/environment.ts",
+                  "with": "projects/admin/environments/environment.uat.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
             "prod": {
-              "devServerTarget": "jmandreslopez:serve:prod"
+              "fileReplacements": [
+                {
+                  "replace": "projects/admin/environments/environment.ts",
+                  "with": "projects/admin/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             }
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "browserTarget": "admin:build",
+            "port": 4000
+          },
+          "configurations": {
+            "dev": {
+              "browserTarget": "admin:build:dev"
+            },
+            "uat": {
+              "browserTarget": "admin:build:uat"
+            },
+            "prod": {
+              "browserTarget": "admin:build:prod"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "admin:build"
           }
         }
       }
     }
   },
-  "defaultProject": "jmandreslopez"
+  "defaultProject": "site"
 }

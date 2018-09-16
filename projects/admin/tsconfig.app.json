@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/app",
+    "types": [],
+    "paths": {
+      "@library/*": ["library/app/*"],
+      "@admin/*": ["projects/admin/app/*"],
+      "@site/*": ["projects/site/app/*"],
+      "@config": ["projects/admin/config.ts"],
+      "@environment": ["projects/admin/environments/environment.ts"],
+    }
+  }
+}
